@@ -1,0 +1,6 @@
+s = input()
+length = float(s)
+perimetr = round (4 * length, 2)
+area = round (length ** 2, 2)
+diagonal = round ((2 * length ** 2) ** 0.5, 2)
+print(perimetr, area, diagonal)
