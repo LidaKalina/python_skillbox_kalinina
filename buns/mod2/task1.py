@@ -4,7 +4,8 @@ b = ''
 space = 0
 for i in s:
     if space == 0:
-        a += i
+        if i != ',':
+            a += i
     else:
         b += i
     if i == ' ':
