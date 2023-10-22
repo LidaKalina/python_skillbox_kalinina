@@ -19,6 +19,10 @@ def letter_statistics(string):
 file_name = input()
 f = open(file_name)
 text = f.read()
+f.close()
 result = letter_statistics(text)
 sorted_result = sorted(result.items(), key=lambda item: item[1], reverse=True)
-print(sorted_result)
+f = open('letter statistics.txt', 'w')
+for i in range(len(sorted_result)):
+    f.write(sorted_result[i] + '\n')
+f.close()
