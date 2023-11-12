@@ -13,7 +13,7 @@ def timer(func):
 
     return wrapped_func
 
-'''
+
 def memoize(func):
     cache = {}
 
@@ -32,7 +32,7 @@ def fibonacci_memoise(n):
     if n < 2:
         return n
     return fibonacci_memoise(n - 1) + fibonacci_memoise(n - 2)
-'''
+
 
 @timer
 def fibonacci(n):
@@ -42,4 +42,4 @@ def fibonacci(n):
 
 
 print(fibonacci(100))
-#print(fibonacci_memoise(100))
+print(fibonacci_memoise(100))
