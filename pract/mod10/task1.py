@@ -23,7 +23,7 @@ def is_correct_password(password):
     False
 
     """
-    pattern = r'(?=.*\d)(?=.*[a-z])(?=.*[A-Z]{2,})([^$%@#&*!?]{2,}).{6,}'
+    pattern = r'(\d+[a-z]+[A-Z]{2,}[^$%@#&*!?]{2,}.{6,}(.)\1\1'
     if re.fullmatch(pattern, password):
         return True
     else:
@@ -31,4 +31,3 @@ def is_correct_password(password):
 
 
 doctest.testmod()
-print(is_correct_password('rtG3FG!Tr^e'))
